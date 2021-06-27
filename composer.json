@@ -1,0 +1,28 @@
+{
+    "name": "bauhaus/dsn",
+    "description": "Yet another dsn implementation",
+    "keywords": ["bauhaus", "dsn"],
+
+    "type": "library",
+    "license": "MIT",
+
+    "autoload": {
+        "psr-4": {
+            "Bauhaus\\": "src/"
+        }
+    },
+
+    "autoload-dev": {
+        "psr-4": {
+            "Bauhaus\\": "tests/"
+        }
+    },
+
+    "require": {
+        "php": "^8.0"
+    },
+
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
