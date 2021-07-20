@@ -1,7 +1,7 @@
 {
     "name": "bauhaus/dsn",
     "description": "Yet another dsn implementation",
-    "keywords": ["bauhaus", "dsn"],
+    "keywords": ["bauhaus", "uri", "RFC3986"],
 
     "type": "library",
     "license": "MIT",
