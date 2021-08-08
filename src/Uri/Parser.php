@@ -58,11 +58,13 @@ final class Parser
         $port = '(?<port>[\d]*)';
         $authority = "($user(:$pass)?@)?$host(:$port)?";
 
+        $pathWithSlash = "(?<pathWithSlash>[\/][a-z\d\/+-]*)?";
+
         $path = "(?<path>[a-z\d\/+-]*)";
         $query = "(?<query>[a-z\d\/\+\-\=\&]*)";
         $fragment = '(?<fragment>[a-z]*)';
 
-        return "%^$scheme:(//$authority)?$path?(\?$query)?(#$fragment)?$%";
+        return "%^$scheme:((//$authority$pathWithSlash)|$path)(\?$query)?(#$fragment)?$%";
     }
 
     private function ensureFields(): void
@@ -71,7 +73,7 @@ final class Parser
         $this->result['password'] ??= null;
         $this->result['host'] ??= null;
         $this->result['port'] ??= null;
-        $this->result['path'] ??= '';
+        $this->result['path'] ??= $this->result['pathWithSlash'] ?? '';
         $this->result['query'] ??= [];
         $this->result['fragment'] ??= null;
         $this->result['path'] ??= '';

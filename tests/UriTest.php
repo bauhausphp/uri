@@ -232,7 +232,7 @@ class UriTest extends TestCase
         return [
             '1tel:+49666',
             '1scheme://host',
-            // 'scheme://host:666asd',
+            'scheme://host:666asd',
         ];
     }
 
