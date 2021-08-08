@@ -1,6 +1,6 @@
 {
-    "name": "bauhaus/dsn",
-    "description": "Yet another dsn implementation",
+    "name": "bauhaus/uri",
+    "description": "Yet another URI implementation",
     "keywords": ["bauhaus", "uri", "RFC3986"],
 
     "type": "library",
